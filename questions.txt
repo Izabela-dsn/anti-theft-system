@@ -1,0 +1,2 @@
+questions: 
+1) where this software will be implemented? In a computer, in a display?
