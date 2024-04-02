@@ -32,11 +32,15 @@
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
+            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            Mapa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
             // 
             // Mapa
             // 
             Mapa.BackColor = SystemColors.ControlLight;
+            Mapa.Controls.Add(webView21);
             Mapa.FlatStyle = FlatStyle.System;
             Mapa.Location = new Point(708, 52);
             Mapa.Name = "Mapa";
@@ -76,6 +80,18 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Eventos";
             // 
+            // webView21
+            // 
+            webView21.AllowExternalDrop = true;
+            webView21.CreationProperties = null;
+            webView21.DefaultBackgroundColor = Color.White;
+            webView21.Location = new Point(6, 30);
+            webView21.Name = "webView21";
+            webView21.Size = new Size(982, 439);
+            webView21.TabIndex = 0;
+            webView21.ZoomFactor = 1D;
+            webView21.Click += webView21_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -87,6 +103,8 @@
             Controls.Add(Mapa);
             Name = "Form1";
             Text = "Form1";
+            Mapa.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
             ResumeLayout(false);
         }
 
@@ -96,5 +114,6 @@
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }
