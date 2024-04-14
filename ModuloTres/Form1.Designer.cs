@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             Mapa = new GroupBox();
+            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
-            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             Mapa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
@@ -50,6 +50,18 @@
             Mapa.Text = "Mapa";
             Mapa.Enter += groupBox1_Enter_1;
             // 
+            // webView21
+            // 
+            webView21.AllowExternalDrop = true;
+            webView21.CreationProperties = null;
+            webView21.DefaultBackgroundColor = Color.White;
+            webView21.Location = new Point(6, 30);
+            webView21.Name = "webView21";
+            webView21.Size = new Size(982, 439);
+            webView21.TabIndex = 0;
+            webView21.ZoomFactor = 1D;
+            webView21.Click += webView21_Click;
+            // 
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.ControlLight;
@@ -59,6 +71,7 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Dispositivos IED";
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // groupBox3
             // 
@@ -79,18 +92,6 @@
             groupBox4.TabIndex = 3;
             groupBox4.TabStop = false;
             groupBox4.Text = "Eventos";
-            // 
-            // webView21
-            // 
-            webView21.AllowExternalDrop = true;
-            webView21.CreationProperties = null;
-            webView21.DefaultBackgroundColor = Color.White;
-            webView21.Location = new Point(6, 30);
-            webView21.Name = "webView21";
-            webView21.Size = new Size(982, 439);
-            webView21.TabIndex = 0;
-            webView21.ZoomFactor = 1D;
-            webView21.Click += webView21_Click;
             // 
             // Form1
             // 
