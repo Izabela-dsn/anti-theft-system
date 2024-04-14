@@ -82,7 +82,7 @@ namespace ModuloTres
             /* --- Handle with the content of the package, in this initial case this just serve a tuple with the coordinates --- */
             List<Tuple<double, double>> coord = new List<Tuple<double, double>>
             {
-               Tuple.Create(-18.90638060788791, -48.23601196678411),// Parque do Sabiá
+               Tuple.Create(-18.90638060788791, -48.23601196678411),// Parque do Sabiï¿½
                Tuple.Create(-18.923591660657966, -48.28421094851784)
             };
             return coord;
@@ -160,7 +160,7 @@ namespace ModuloTres
 
         private void LoadMap(List<Tuple<double, double>> coordinates)
         {
-            string apiKey = "AIzaSyCdBRxojFOJA16ilfd2Hsy8Skpi9KSuEc0";
+            string apiKey = "API_KEY";
 
             if (webView21.CoreWebView2 != null)
             {
@@ -172,7 +172,7 @@ namespace ModuloTres
             }
             else
             {
-                MessageBox.Show("O controle WebView2 não pôde ser inicializado.");
+                MessageBox.Show("O controle WebView2 nï¿½o pï¿½de ser inicializado.");
             }
         }
 
@@ -186,10 +186,10 @@ namespace ModuloTres
             chart.Size = new System.Drawing.Size(750, 350);
             chart.ChartAreas.Add(new ChartArea());
             //chart.Series.Add(new Series());
-            Series series = chart.Series.Add("Minha Série");
+            Series series = chart.Series.Add("Minha Sï¿½rie");
             series.ChartType = SeriesChartType.Line;
 
-            // Adicionando os pontos ao gráfico
+            // Adicionando os pontos ao grï¿½fico
 
 
             foreach (var medida in medidas)
@@ -198,12 +198,12 @@ namespace ModuloTres
                 series.Points.AddXY(medida.Key, medida.Value);
             }
 
-            // Definindo o tipo de gráfico
+            // Definindo o tipo de grï¿½fico
             //chart.Series[0].ChartType = SeriesChartType.Line;
             //chart.Series[0]["PixelPointWidth"] = "5";
             //chart.ChartAreas[0].AxisX.Interval = 1.0;
 
-            // Adicionando o gráfico ao formulário
+            // Adicionando o grï¿½fico ao formulï¿½rio
             groupBox2.Controls.Add(chart);
         }
 
