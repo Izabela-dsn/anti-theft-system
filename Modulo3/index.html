@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Monitor Visual</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="">Gráficos</a><a href="">Mapa</a><a href="">Alertas</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- <h4>Gráfico</h4> -->
+      <div class="graphs">
+        <div class="filterIED">
+          <!-- <label for="">Filtro:</label> -->
+          <input type="text" />
+          <button>Filtrar</button>
+        </div>
+        <div class="graphsIED"></div>
+      </div>
+      <!-- <h4>Mapa</h4> -->
+      <div class="map"></div>
+      <!-- <h4>Alertas</h4> -->
+      <div class="alerts"></div>
+      <!-- <h4>Modulo 4</h4> -->
+      <div class="module4"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="loadMap.js"></script>
+    <script type="module" src="app.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdBRxojFOJA16ilfd2Hsy8Skpi9KSuEc0&callback=initMap"
+    ></script>
+  </body>
+</html>
