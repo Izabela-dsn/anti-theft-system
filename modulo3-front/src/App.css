@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+
+@font-face {
+  font-family: Sansation;
+  src: url("./assets/font/Sansation_Regular.ttf");
+}
+
+body {
+  font-family: Sansation;
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.graphs {
+  overflow: auto;
+  height: 75vh;
+  width: 50vw;
+  background-color: #d7d7d8;
+  border-radius: 0.3rem;
+}
+.headerGraphs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.chart {
+  width: 95%;
+  background-color: whitesmoke;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.graphsIED {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 25%;
+  gap: 1rem;
+}

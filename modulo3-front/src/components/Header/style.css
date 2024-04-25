@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  border-bottom: 1px solid #919191;
+  background-color: #ffffff;
+}
+
+nav {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}

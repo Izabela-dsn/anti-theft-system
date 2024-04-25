@@ -1,0 +1,30 @@
+.alerts {
+  background-color: #d7d7d8;
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+thead {
+  background-color: d7d7d8;
+}
+
+th,
+td {
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
