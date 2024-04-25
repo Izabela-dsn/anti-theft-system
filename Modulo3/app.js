@@ -1,14 +1,7 @@
 // const socket = io('http://localhost:3000');
 const displayGraphs = document.querySelector(".graphsIED")
-// let dispositivo = {
-//   idDispositivo: Math.floor(Math.random() * 100), // Gera um número aleatório entre 0 e 99
-//   Ia: Math.random() * 10, // Gera um número aleatório entre 0 e 10
-//   Ib: Math.random() * 10, // Gera um número aleatório entre 0 e 10
-//   Ic: Math.random() * 20, // Gera um número aleatório entre 0 e 20
-//   numPacote: Math.floor(Math.random() * 1000), // Gera um número aleatório entre 0 e 999
-// }
-
-// console.log(dispositivo)
+const displayAlerts = document.querySelector("tbody")
+const group = {}
 
 const IEDData = [
   {
@@ -121,17 +114,22 @@ const alertData = [
   {
     id: 1,
     typeOfEvent: "Warning",
-    id_IED: 1,
+    id_IED: Math.floor(Math.random() * 26),
   },
   {
-    id: 1,
+    id: 2,
     typeOfEvent: "Warning",
-    id_IED: 1,
+    id_IED: Math.floor(Math.random() * 26),
   },
   {
-    id: 1,
+    id: 3,
     typeOfEvent: "Warning",
-    id_IED: 1,
+    id_IED: Math.floor(Math.random() * 26),
+  },
+  {
+    id: 4,
+    typeOfEvent: "Curto Circuito",
+    id_IED: Math.floor(Math.random() * 26),
   },
 ]
 
@@ -193,10 +191,6 @@ const generateGraphs = (groupOfDataFromIED) => {
   }
 }
 
-// generate alerts
-// show the data in a table format
-
-const group = {}
 const groupByIdIED = (data) => {
   data.forEach((IED) => {
     // identificar o id
@@ -213,4 +207,41 @@ const groupByIdIED = (data) => {
   })
   return group
 }
+
+// generate alerts
+// show the data in a table format
+const showAlerts = (data) => {
+  //create a new tr
+  data.forEach((alert) => {
+    console.log(alert)
+    let now = new Date()
+    if (alert.typeOfEvent === "Warning") {
+      let newTr = `
+      <tr>
+        <th>
+          <img src="./assets/icons/mingcute_alert-fill.svg" alt="" />
+        </th>
+        <td>${alert.id}</td>
+        <th scope="row">Alerta dispositivo ${alert.id_IED}</th>
+        <td>${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}</td>
+      </tr>
+      `
+      displayAlerts.innerHTML += newTr
+    } else if (alert.typeOfEvent === "Curto Circuito") {
+      let newTr = `
+      <tr>
+        <th>
+          <img src="./assets/icons/mingcute_alert-fill-red.svg" alt="" />
+        </th>
+        <td>${alert.id}</td>
+        <th scope="row">Curto circuito dispositivo ${alert.id_IED}</th>
+        <td>${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}</td>
+      </tr>
+      `
+      displayAlerts.innerHTML += newTr
+    }
+  })
+}
+
 generateGraphs(groupByIdIED(IEDData))
+showAlerts(alertData)

@@ -1,4 +1,4 @@
-import { groupByIdIED as _groupByIdIED } from "./dataGraph.js"
+// import { groupByIdIED as _groupByIdIED } from "./dataGraph.js"
 import { createSocket } from "dgram"
 const server = createSocket("udp4")
 
@@ -8,12 +8,10 @@ server.on("error", (err) => {
 })
 
 server.on("message", (msg, rinfo) => {
-  console.log(msg)
-  let mensagemRecebida = msg.toString()
-  _groupByIdIED(mensagemRecebida)
-  console.log(
-    `server got: ${mensagemRecebida} from ${rinfo.address}:${rinfo.port}`
-  )
+  // console.log(msg)
+  // let mensagemRecebida = msg.toString()
+  // _groupByIdIED(mensagemRecebida)
+  console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`)
 })
 
 server.on("listening", () => {
@@ -21,4 +19,4 @@ server.on("listening", () => {
   console.log(`server listening ${address.address}:${address.port}`)
 })
 
-server.bind(12346) // server listening 0.0.0.0:12345
+server.bind(1234) // server listening 0.0.0.0:1234

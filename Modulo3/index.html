@@ -15,20 +15,31 @@
     </header>
 
     <div class="container">
-      <!-- <h4>Gráfico</h4> -->
       <div class="graphs">
-        <div class="filterIED">
-          <!-- <label for="">Filtro:</label> -->
-          <input type="text" />
-          <button>Filtrar</button>
+        <div class="headerGraphs">
+          <span>Gráficos</span>
+          <div class="filterIED">
+            <input type="text" />
+            <button>Filtrar</button>
+          </div>
         </div>
         <div class="graphsIED"></div>
       </div>
-      <!-- <h4>Mapa</h4> -->
       <div class="map"></div>
-      <!-- <h4>Alertas</h4> -->
-      <div class="alerts"></div>
-      <!-- <h4>Modulo 4</h4> -->
+      <div class="alerts">
+        <span>Alertas</span>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Id</th>
+              <th>Mensagem</th>
+              <th>Hora</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
       <div class="module4"></div>
     </div>
 
@@ -39,7 +50,7 @@
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdBRxojFOJA16ilfd2Hsy8Skpi9KSuEc0&callback=initMap"
     ></script>
   </body>
 </html>
