@@ -9,3 +9,9 @@ Pastas validas:
 
 - Modulo3-server
 - Modulo3-front
+
+3 tentativas de fazer o trabalho:
+
+- Em C#
+- Em Javascript Puro e HTML e CSS
+- Com servidor Nodejs e ReactJS
