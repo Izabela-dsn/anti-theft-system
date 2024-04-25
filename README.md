@@ -15,3 +15,6 @@ Pastas validas:
 - Em C#
 - Em Javascript Puro e HTML e CSS
 - Com servidor Nodejs e ReactJS
+
+Apresentação:
+  https://www.canva.com/design/DAGDXRYGkWk/usNgM8DRt8R54AqV-Cos5g/view?utm_content=DAGDXRYGkWk&utm_campaign=designshare&utm_medium=link&utm_source=editor
